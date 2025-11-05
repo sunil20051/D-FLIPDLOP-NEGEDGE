@@ -28,39 +28,53 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 
 **Procedure**
 
-```
-/* write all the steps invloved
-1.Type the program in Quartus software using Verilog to implement the D flip-flop with negative edge-triggered clock. 
-2.Compile and run the program to ensure there are no syntax errors.
-3.Generate the RTL schematic and save the logic diagram for documentation. 
-4.Create nodes for inputs (D, clk) and outputs (Q, Q_bar) in the simulation tool. 
-5.Simulate the design to generate the timing diagram for different input combinations.
-*/
-```
+1.Type the program in Quartus software.
+
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
+5.For different input combinations generate the timing diagram.
+
+
+
 **PROGRAM**
 
 ```
-/* Program for flipflops and verify its truth table in quartus using Verilog programming.
-Developed by:Devika D
-RegisterNumber:24002534
-module d_ff_neg_edge (d, clk, rst, q);
-  input d, clk, rst;
-  output reg q;
-
-  always @(negedge clk or posedge rst) begin
-    if (rst)
-      q <= 0;
-    else
-      q <= d;
-  end
+module ex8(D,clk,Q,Qbar);
+input D,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=D;
+Qbar=~D;
+end
 endmodule
-*/
 ```
+
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+## Developed by: D DEVIKA
+## RegisterNumber: 212224100010
+*/
+
 **RTL LOGIC FOR FLIPFLOPS**
-![Screenshot 2024-12-05 104318](https://github.com/user-attachments/assets/42d0af8b-f991-401e-bb9f-7cea4ede494b)
+
+![441074494-2c5217b0-4a5b-45e6-850d-433c737b6592](https://github.com/user-attachments/assets/22841e16-5e84-4f06-8fbc-827884bd5d67)
+
+
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
-![Screenshot 2024-12-05 104327](https://github.com/user-attachments/assets/b93bcc37-6f5b-48af-8668-d3a3ae4d3b72)
+![441074603-1c7e0a8d-45ee-47b5-8fd5-b717956bf8da](https://github.com/user-attachments/assets/b627d816-6e9b-4262-ad19-8cf00c5ad766)
+
+
+
 
 **RESULTS**
-Program for D flipflop was verified in quartus using Verilog programming.
+
+Thus To implement D flipflop using verilog and validating their functionality using their functional tables is implemented and the output is verified.
+
