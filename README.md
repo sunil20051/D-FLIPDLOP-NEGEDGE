@@ -76,5 +76,6 @@ endmodule
 
 **RESULTS**
 
-Thus To implement D flipflop using verilog and validating their functionality using their functional tables is implemented and the output is verified.
+Thus To implement D flipflop using verilog and validating their functionality using their functional tables is implemented and the output is verified.# D-FLIPDLOP-NEGEDGE
+
 
